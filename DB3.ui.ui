@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>DB3</class>
+	<widget class="QMainWindow" name="DB3">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>1000</width>
+				<height>700</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>Database Management System</string>
+		</property>
+		<widget class="QWidget" name="centralwidget">
+			<layout class="QVBoxLayout" name="verticalLayout">
+				<item>
+					<widget class="QLabel" name="titleLabel">
+						<property name="font">
+							<font>
+								<pointsize>16</pointsize>
+								<weight>75</weight>
+								<bold>true</bold>
+							</font>
+						</property>
+						<property name="text">
+							<string>Database Management System</string>
+						</property>
+						<property name="alignment">
+							<set>Qt::AlignCenter</set>
+						</property>
+					</widget>
+				</item>
+				<item>
+					<widget class="QLabel" name="statusLabel">
+						<property name="text">
+							<string>Status: No database opened</string>
+						</property>
+					</widget>
+				</item>
+				<item>
+					<layout class="QHBoxLayout" name="horizontalLayout">
+						<item>
+							<widget class="QGroupBox" name="dbGroup">
+								<property name="title">
+									<string>Database Operations</string>
+								</property>
+								<layout class="QVBoxLayout" name="verticalLayout_2">
+									<item>
+										<widget class="QPushButton" name="createDB">
+											<property name="text">
+												<string>Create New Database</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="openDB">
+											<property name="text">
+												<string>Open Database</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="deleteDB">
+											<property name="text">
+												<string>Delete Database</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="clearDB">
+											<property name="text">
+												<string>Clear All Records</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="backup">
+											<property name="text">
+												<string>Create Backup</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="restore">
+											<property name="text">
+												<string>Restore from Backup</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="exportCSV">
+											<property name="text">
+												<string>Export to CSV</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="displayAll">
+											<property name="text">
+												<string>Display All Records</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="showStats">
+											<property name="text">
+												<string>Show Statistics</string>
+											</property>
+										</widget>
+									</item>
+								</layout>
+							</widget>
+						</item>
+						<item>
+							<widget class="QGroupBox" name="recordGroup">
+								<property name="title">
+									<string>Record Operations</string>
+								</property>
+								<layout class="QVBoxLayout" name="verticalLayout_3">
+									<item>
+										<layout class="QHBoxLayout" name="horizontalLayout_2">
+											<item>
+												<widget class="QLabel" name="label">
+													<property name="text">
+														<string>ID (0-999):</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="idEdit"/>
+											</item>
+											<item>
+												<widget class="QLabel" name="label_2">
+													<property name="text">
+														<string>Title:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="titleEdit"/>
+											</item>
+											<item>
+												<widget class="QLabel" name="label_3">
+													<property name="text">
+														<string>Author:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="authorEdit"/>
+											</item>
+											<item>
+												<widget class="QLabel" name="label_4">
+													<property name="text">
+														<string>Rating:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="ratingEdit"/>
+											</item>
+											<item>
+												<widget class="QPushButton" name="addRecord">
+													<property name="text">
+														<string>Add Record</string>
+													</property>
+												</widget>
+											</item>
+										</layout>
+									</item>
+									<item>
+										<layout class="QHBoxLayout" name="horizontalLayout_3">
+											<item>
+												<widget class="QLabel" name="label_5">
+													<property name="text">
+														<string>Delete by ID:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="deleteIDEdit"/>
+											</item>
+											<item>
+												<widget class="QPushButton" name="deleteByID">
+													<property name="text">
+														<string>Delete</string>
+													</property>
+												</widget>
+											</item>
+										</layout>
+									</item>
+									<item>
+										<layout class="QHBoxLayout" name="horizontalLayout_4">
+											<item>
+												<widget class="QLabel" name="label_6">
+													<property name="text">
+														<string>Delete by Field:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QComboBox" name="deleteFieldCombo">
+													<item>
+														<property name="text">
+															<string>title</string>
+														</property>
+													</item>
+													<item>
+														<property name="text">
+															<string>author</string>
+														</property>
+													</item>
+													<item>
+														<property name="text">
+															<string>rating</string>
+														</property>
+													</item>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="deleteValueEdit"/>
+											</item>
+											<item>
+												<widget class="QPushButton" name="deleteByField">
+													<property name="text">
+														<string>Delete</string>
+													</property>
+												</widget>
+											</item>
+										</layout>
+									</item>
+									<item>
+										<layout class="QHBoxLayout" name="horizontalLayout_5">
+											<item>
+												<widget class="QLabel" name="label_7">
+													<property name="text">
+														<string>Search by ID:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="searchIDEdit"/>
+											</item>
+											<item>
+												<widget class="QPushButton" name="searchByID">
+													<property name="text">
+														<string>Search</string>
+													</property>
+												</widget>
+											</item>
+										</layout>
+									</item>
+									<item>
+										<layout class="QHBoxLayout" name="horizontalLayout_6">
+											<item>
+												<widget class="QLabel" name="label_8">
+													<property name="text">
+														<string>Search by Field:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QComboBox" name="searchFieldCombo">
+													<item>
+														<property name="text">
+															<string>title</string>
+														</property>
+													</item>
+													<item>
+														<property name="text">
+															<string>author</string>
+														</property>
+													</item>
+													<item>
+														<property name="text">
+															<string>rating</string>
+														</property>
+													</item>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="searchValueEdit"/>
+											</item>
+											<item>
+												<widget class="QPushButton" name="searchByField">
+													<property name="text">
+														<string>Search</string>
+													</property>
+												</widget>
+											</item>
+										</layout>
+									</item>
+									<item>
+										<layout class="QHBoxLayout" name="horizontalLayout_7">
+											<item>
+												<widget class="QLabel" name="label_9">
+													<property name="text">
+														<string>Change Record ID:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="changeIDEdit"/>
+											</item>
+											<item>
+												<widget class="QLabel" name="label_10">
+													<property name="text">
+														<string>New Title:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="changeTitleEdit"/>
+											</item>
+											<item>
+												<widget class="QLabel" name="label_11">
+													<property name="text">
+														<string>New Author:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="changeAuthorEdit"/>
+											</item>
+											<item>
+												<widget class="QLabel" name="label_12">
+													<property name="text">
+														<string>New Rating:</string>
+													</property>
+												</widget>
+											</item>
+											<item>
+												<widget class="QLineEdit" name="changeRatingEdit"/>
+											</item>
+											<item>
+												<widget class="QPushButton" name="changeRecord">
+													<property name="text">
+														<string>Change</string>
+													</property>
+												</widget>
+											</item>
+										</layout>
+									</item>
+								</layout>
+							</widget>
+						</item>
+					</layout>
+				</item>
+				<item>
+					<widget class="QTextEdit" name="resultsText">
+						<property name="font">
+							<font>
+								<family>Courier New</family>
+								<pointsize>10</pointsize>
+							</font>
+						</property>
+					</widget>
+				</item>
+			</layout>
+		</widget>
+	</widget>
+	<resources/>
+	<connections/>
+</ui>
