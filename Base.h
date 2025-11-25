@@ -689,49 +689,4 @@ public:
         result += "Free records: " + to_string(TOTAL_RECORDS - count);
         return result;
     }
-    /*    vector<string> getBookDisplayInfo(int id) {
-            Book book = readRecord(id);
-            vector<string> info;
-            if (book.flag == '1') {
-                //clean ID from zeros
-                string clean_id;
-                if (book.id == string(ID_SIZE, '0')) {
-                    clean_id = '0';
-                }
-                else {
-                    int j1 = 0;
-                    while ((j1 < ID_SIZE) && (book.id[j1] == '0')) {
-                        ++j1;
-                    }
-                    while (j1 < ID_SIZE) {
-                        clean_id.push_back(book.id[j1]);
-                        ++j1;
-                    }
-                }
-                info.push_back(clean_id);
-
-                //clean Title from '/'
-                string clean_title;
-                int j2 = 0;
-                while ((j2 < TITLE_SIZE) && (book.title[j2] != '/')) {
-                    clean_title.push_back(book.title[j2]);
-                    ++j2;
-                }
-                info.push_back(clean_title);
-
-                //clean author from '/'
-                string clean_author;
-                int j3 = 0;
-                while ((j3 < AUTHOR_SIZE) && (book.author[j3] != '/')) {
-                    clean_author.push_back(book.author[j3]);
-                    ++j3;
-                }
-                info.push_back(clean_author);
-
-                //Rating
-                info.push_back(string(1, book.rating));
-            }
-            return info;
-        }
-        */
 };
